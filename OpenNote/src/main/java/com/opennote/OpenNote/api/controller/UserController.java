@@ -25,4 +25,9 @@ public class UserController {
         return null;
     }
 
+    @GetMapping("/userset")
+    public void setUser(){
+        this.userService.setUserListToFirebase();
+    }
+
 }
