@@ -1,2 +1,4 @@
-package com.opennote.OpenNote.service;public class FirebaseService {
+package com.opennote.OpenNote.service;
+
+public class FirebaseService {
 }
