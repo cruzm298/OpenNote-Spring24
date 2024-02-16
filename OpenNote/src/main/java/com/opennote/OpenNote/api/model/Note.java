@@ -3,6 +3,8 @@ package com.opennote.OpenNote.api.model;
 import java.util.Date;
 
 public class Note {
+
+    // attributes for Note class
     private Long noteID;
     private String title;
     private String content;
@@ -15,5 +17,107 @@ public class Note {
     private int upVote;
     private int downVote;
 
+    // Constructor for Note object
+    public Note(Long noteID, String title, String content, Long authorID, Long categoryID, int viewCount, int downloadCount, int upVote, int downVote){
+        this.noteID = noteID;
+        this.title = title;
+        this.content = content;
+        this.authorID = authorID;
+        //this.creationDate = creationDate;
+        //this.modificationDate = modificationDate;
+        this.categoryID = categoryID;
+        this.viewCount = viewCount;
+        this.downloadCount = downloadCount;
+        this.upVote = upVote;
+        this.downVote = downVote;
+    }
 
+    // get and set methods for attributes
+    public Long getNoteID{
+        return noteID;
+    }
+
+    public void setNoteID{
+        this.noteID = noteID;
+    }
+
+    public String getTitle{
+        return title;
+    }
+
+    public void setTitle{
+        this.title = title;
+    }
+
+    public String getContent{
+        return content;
+    }
+
+    public void setContent{
+        this.content = content;
+    }
+
+    public Long getAuthorID{
+        return authorID;
+    }
+
+    public void setAuthorID{
+        this.authorID = authorID;
+    }
+
+    public Date getCreationDate{
+        return creationDate;
+    }
+
+    public void setCreationDate{
+        this.creationDate = creationDate;
+    }
+
+    public Date getModificationDate{
+        return modificationDate;
+    }
+
+    public void setModificationDate{
+        this.modificationDate = modificationDate;
+    }
+
+    public Long getCategoryID{
+        return categoryID;
+    }
+
+    public void setCategoryID{
+        this.categoryID = categoryID;
+    }
+
+    public int getViewCount{
+        return viewCount;
+    }
+
+    public void setViewCount{
+        this.viewCount = viewCount;
+    }
+
+    public int getDownloadCount{
+        return downloadCount;
+    }
+
+    public void setDownloadCount{
+        this.downloadCount = downloadCount;
+    }
+
+    public int getUpVote{
+        return upVote;
+    }
+
+    public void setUpVote{
+        this.upVote = upVote;
+    }
+
+    public int getDownVote{
+        return downVote;
+    }
+
+    public void setDownVote{
+        this.downVote = downVote;
+    }
 }
