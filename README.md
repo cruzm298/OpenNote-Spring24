@@ -7,6 +7,7 @@ Being a student comes with many responsibilities. You have to attend lectures, d
   3. Took bad notes in class
   4. No availability to get help from the professor during your schedule
   5. Professors don’t have always have to way to accommodate for students with disabilities during lectures
+
 With digitalization becoming a trend, an efficient way to tackle these problems is to digitize past student course materials for the benefit of one another. This app is a social platform designed for students to share their notes with their classmates and other students around the world. 
 OpenNote allows for students to collaborate with their classmates on textbook sections by submitting notes to a central database. This allows students to ask each other questions through comments and share ideas between their classes. 
 The collaborative approach to learning goes beyond the classroom; StudyClub also allows users to search across a vast collection of notes taken by students across the globe. The most popular and well written notes are immediately brought to the user to ensure reliable and effective studies.
