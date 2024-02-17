@@ -18,7 +18,3 @@ The main features we plan to integrate are:
   4. Up vote/down vote notes
   5. User feed
   6. Comment on notes
-
-
-
-Testing commit - Krutartha
