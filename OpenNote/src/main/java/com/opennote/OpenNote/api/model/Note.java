@@ -33,91 +33,91 @@ public class Note {
     }
 
     // get and set methods for attributes
-    public Long getNoteID{
+    public Long getNoteID(){
         return noteID;
     }
 
-    public void setNoteID{
+    public void setNoteID(Long noteID){
         this.noteID = noteID;
     }
 
-    public String getTitle{
+    public String getTitle(){
         return title;
     }
 
-    public void setTitle{
+    public void setTitle(String title){
         this.title = title;
     }
 
-    public String getContent{
+    public String getContent(){
         return content;
     }
 
-    public void setContent{
+    public void setContent(String content){
         this.content = content;
     }
 
-    public Long getAuthorID{
+    public Long getAuthorID(){
         return authorID;
     }
 
-    public void setAuthorID{
+    public void setAuthorID(Long authorID){
         this.authorID = authorID;
     }
 
-    public Date getCreationDate{
+    public Date getCreationDate(){
         return creationDate;
     }
 
-    public void setCreationDate{
+    public void setCreationDate(Date creationDate){
         this.creationDate = creationDate;
     }
 
-    public Date getModificationDate{
+    public Date getModificationDate(){
         return modificationDate;
     }
 
-    public void setModificationDate{
+    public void setModificationDate(Date modificationDate){
         this.modificationDate = modificationDate;
     }
 
-    public Long getCategoryID{
+    public Long getCategoryID(){
         return categoryID;
     }
 
-    public void setCategoryID{
+    public void setCategoryID(Long categoryID){
         this.categoryID = categoryID;
     }
 
-    public int getViewCount{
+    public int getViewCount(){
         return viewCount;
     }
 
-    public void setViewCount{
+    public void setViewCount(int viewCount){
         this.viewCount = viewCount;
     }
 
-    public int getDownloadCount{
+    public int getDownloadCount(){
         return downloadCount;
     }
 
-    public void setDownloadCount{
+    public void setDownloadCount(int downloadCount){
         this.downloadCount = downloadCount;
     }
 
-    public int getUpVote{
+    public int getUpVote(){
         return upVote;
     }
 
-    public void setUpVote{
+    public void setUpVote(int upVote){
         this.upVote = upVote;
     }
 
-    public int getDownVote{
+    public int getDownVote(){
         return downVote;
     }
 
-    public void setDownVote{
+    public void setDownVote(int downVote){
         this.downVote = downVote;
     }
 }
