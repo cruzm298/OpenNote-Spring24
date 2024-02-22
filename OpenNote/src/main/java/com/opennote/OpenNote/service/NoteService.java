@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Optional;
+import java.util.*;
+
 
 @Service
 public class NoteService {
@@ -16,8 +18,8 @@ public class NoteService {
     public NoteService(){
         noteList = new ArrayList<>();
 
-        Note note1 = new Note(noteID: 12345678910, title: "First Note", content: "This is the first note", authorID: 123, categoryID: 2, viewCount: 20, donwloadCount: 10, upVote: 5, downVote: 6);
-        Note note2 = new Note(noteID: 36374748388, title: "second Note", content: "This is the second note", authorID: 674, categoryID: 3, viewCount: 67, donwloadCount: 40, upVote: 20, downVote: 30);
+        Note note1 = new Note(127694L, "First Note", "This is the first note", 123L, 2L, 20, 10, 5,6);
+        Note note2 = new Note(363932L, "second Note", "This is the second note", 674L, 3L, 67, 40, 20, 30);
 
         noteList.addAll(Arrays.asList(note1, note2));
     }
