@@ -2,6 +2,7 @@ package com.opennote.OpenNote.service;
 
 // The CommentService manages the list of comments in memory but can be extended to interact with a database or any other data source.
 
+import com.opennote.OpenNote.api.model.Comment;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

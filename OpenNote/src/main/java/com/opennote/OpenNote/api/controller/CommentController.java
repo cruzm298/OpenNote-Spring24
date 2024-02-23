@@ -3,6 +3,8 @@ package com.opennote.OpenNote.api.controller;
 // and it delegates the actual operations to the CommentService.
 
 
+import com.opennote.OpenNote.api.model.Comment;
+import com.opennote.OpenNote.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

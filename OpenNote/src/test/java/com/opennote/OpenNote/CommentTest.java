@@ -1,5 +1,9 @@
-import org.junit.Test;
+package com.opennote.OpenNote;
+
+import com.opennote.OpenNote.api.model.Comment;
+import org.junit.jupiter.api.Test;
 import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CommentTest {
 
