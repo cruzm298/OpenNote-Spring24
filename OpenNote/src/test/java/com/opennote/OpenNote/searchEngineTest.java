@@ -1,20 +1,22 @@
 package com.opennote.OpenNote;
 
-import com.opennote.OpenNote.api.controller.SearchEngineController;
+import com.opennote.OpenNote.api.model.SearchEngine;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@SpringBootTest
 public class SearchEngineTest {
 
-    @Autowired
-    private SearchEngineController searchEngineController;
+    @Test
+    public void testSearchEngineCreation() {
+        SearchEngine searchEngine = new SearchEngine("Java");
+        assertEquals("Java", searchEngine.getKeywords());
+    }
 
     @Test
-    void contextLoads() throws Exception {
-        assertThat(searchEngineController).isNotNull();
+    public void testSetKeywords() {
+        SearchEngine searchEngine = new SearchEngine("Java");
+        searchEngine.setKeywords("Spring Boot");
+        assertEquals("Spring Boot", searchEngine.getKeywords());
     }
 }
