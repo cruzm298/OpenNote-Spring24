@@ -9,9 +9,6 @@ import java.util.*;
 
 @Service
 public class UserService {
-
-
-
     private List<User> userList;
     private Firestore db;
     private CollectionReference colRef;
@@ -20,12 +17,12 @@ public class UserService {
         userList = new ArrayList<>();
 
         User user1 = new User(1, "knagesh", "Admin@1234", "knagesh@syr.edu", "admin");
-        User user2 = new User(2, "aparida", "Admin@1234", "aparida@syr.edu", "admin");
+        User user2 = new User(2, "aparida", "Admin@1234", "aparida@syr.edu", "student");
 
         userList.addAll(Arrays.asList(user1, user2));
     }
 
-    public Optional<User> getUser(Integer userId) {
+    public Optional<User> getUser(Integer userId){
         Optional optional = Optional.empty();
 
         for(User user: userList){

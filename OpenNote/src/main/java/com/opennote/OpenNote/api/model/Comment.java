@@ -1,3 +1,5 @@
+package com.opennote.OpenNote.api.model;
+
 import java.util.Date;
 
 public class Comment {
