@@ -120,4 +120,17 @@ public class Note {
     public void setDownVote(int downVote){
         this.downVote = downVote;
     }
+
+    // additonal methods
+    public void createNote(){}
+
+    public void editNote(){}
+
+    public void deleteNote(){}
+
+    public void viewNote(){}
+
+    public void incrementViewCount(){}
+
+    public void incrementDownloadCount(){}
 }
