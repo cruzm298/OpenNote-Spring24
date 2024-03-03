@@ -1,11 +1,9 @@
 package com.opennote.OpenNote;
 
-import com.opennote.OpenNote.api.model.Comment;
 import com.opennote.OpenNote.api.model.User;
 import com.opennote.OpenNote.service.UserService;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class UserTest {
 
