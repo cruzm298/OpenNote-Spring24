@@ -1,0 +1,17 @@
+[
+  {
+    "subjectId": 1,
+    "subjectName": "Math",
+    "subjectDescription": "All things Math"
+  },
+  {
+    "subjectId": 2,
+    "subjectName": "Physics",
+    "subjectDescription": "The mother of all sciences"
+  },
+  {
+    "subjectId": 2,
+    "subjectName": "Chemistry",
+    "subjectDescription": "Very few people like me"
+  }
+]

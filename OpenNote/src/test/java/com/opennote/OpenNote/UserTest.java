@@ -1,21 +1,54 @@
 package com.opennote.OpenNote;
 
-import com.opennote.OpenNote.api.controller.UserController;
+import com.opennote.OpenNote.api.model.Comment;
+import com.opennote.OpenNote.api.model.User;
+import com.opennote.OpenNote.service.UserService;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-
-
-@SpringBootTest
 public class UserTest {
 
-    @Autowired
-    private UserController userController;
+    @Test
+    public void testAddUser() {
+        User user = new User(1, "knagesh", "Admin@123", "knagesh@syr.edu", 1);
+        UserService us = new UserService();
+        User retUser = us.addUser(1, "knagesh", "Admin@123", "knagesh@syr.edu", 1);
+        assertEquals(user.getUserId(), retUser.getUserId());
+        // You can add additional assertions here if needed
+    }
 
     @Test
-    void contextLoads() throws Exception{
-        assertThat(userController).isNotNull();
+    public void testUpdateUser() {
+        //do once db integration is complete
+    }
+
+    @Test
+    public void testDeleteUser() {
+        //do once db integration is complete
+    }
+
+    @Test
+    public void testGetUserId() {
+        User user = new User(1, "knagesh", "Admin@123", "knagesh@syr.edu", 1);
+        assertEquals(1, user.getUserId());
+    }
+
+    @Test
+    public void testGetRoleId() {
+        User user = new User(1, "knagesh", "Admin@123", "knagesh@syr.edu", 1);
+        assertEquals(1, user.getRoleId());
+    }
+
+    @Test
+    public void testGetUsername() {
+        User user = new User(1, "knagesh", "Admin@123", "knagesh@syr.edu", 1);
+        assertEquals("knagesh", user.getUsername());
+    }
+
+    @Test
+    public void testGetEmail() {
+        User user = new User(1, "knagesh", "Admin@123", "knagesh@syr.edu", 1);
+        assertEquals("knagesh@syr.edu", user.getEmail());
     }
 }

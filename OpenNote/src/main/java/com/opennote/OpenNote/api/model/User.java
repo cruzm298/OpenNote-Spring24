@@ -3,32 +3,33 @@ package com.opennote.OpenNote.api.model;
 import java.util.Date;
 
 public class User {
-    private int userID;
+    private int userId;
     private String username;
     private String password;
     private String email;
-    private Date registrationDate;
-    private Date lastLogin;
-    private String role;
+//    private Date registrationDate;
+//    private Date lastLogin;
+    private Integer roleId;
 
     //constructor
-    public User(int userID, String username, String password, String email, String role){
-        this.userID = userID;
+    public User(int userId, String username, String password, String email, Integer roleId){
+        this.userId = userId;
         this.username = username;
         this.password = password;
         this.email = email;
 //        this.registrationDate = registrationDate;
 //        this.lastLogin = lastLogin;
-        this.role = role;
+        this.roleId = roleId;
     }
+    public User(){}
 
     //defining getter and setter methods
-    public int getUserID(){
-        return userID;
+    public int getUserId(){
+        return userId;
     }
 
-    public void setUserID(int userID){
-    this.userID = userID;
+    public void setUserId(int userId){
+    this.userId = userId;
     }
 
     public String getUsername(){
@@ -55,27 +56,27 @@ public class User {
         this.email = email;
     }
 
-    public Date getRegistrationDate(){
-        return registrationDate;
+//    public Date getRegistrationDate(){
+//        return registrationDate;
+//    }
+//
+//    public void setRegistrationDate(Date registrationDate){
+//        this.registrationDate = registrationDate;
+//    }
+//
+//    public Date getLastLogin(){
+//        return lastLogin;
+//    }
+//
+//    public void setLastLogin(Date lastLogin){
+//        this.lastLogin = lastLogin;
+//    }
+
+    public Integer getRoleId(){
+        return roleId;
     }
 
-    public void setRegistrationDate(Date registrationDate){
-        this.registrationDate = registrationDate;
-    }
-
-    public Date getLastLogin(){
-        return lastLogin;
-    }
-
-    public void setLastLogin(Date lastLogin){
-        this.lastLogin = lastLogin;
-    }
-
-    public String getRole(){
-        return role;
-    }
-
-    public void setRole(String role){
-        this.role = role;
+    public void setRoleId(Integer roleId){
+        this.roleId = roleId;
     }
 }

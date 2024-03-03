@@ -2,6 +2,7 @@ package com.opennote.OpenNote;
 
 import com.google.firebase.FirebaseApp;
 import com.opennote.OpenNote.service.FirebaseService;
+import com.opennote.OpenNote.service.utils.DBPush;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
