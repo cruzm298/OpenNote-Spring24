@@ -11,21 +11,21 @@ import java.util.Optional;
 
 @RestController
 public class RoleController {
-    private final RoleService roleService;
-
-    @Autowired
-    public RoleController(RoleService roleService) {
-        this.roleService = roleService;
-    }
-
-    @GetMapping("/role")
-    public Role getRole(@RequestParam Integer roleId) {
-        Optional<Role> role = roleService.getRole(roleId);
-        return role.orElse(null);
-    }
-
-    @GetMapping("/roleset")
-    public void setRole() {
-        roleService.initializeRoles();
-    }
+//    private final RoleService roleService;
+//
+//    @Autowired
+//    public RoleController(RoleService roleService) {
+//        this.roleService = roleService;
+//    }
+//
+//    @GetMapping("/role")
+//    public Role getRole(@RequestParam Integer roleId) {
+//        Optional<Role> role = roleService.getRole(roleId);
+//        return role.orElse(null);
+//    }
+//
+//    @GetMapping("/roleset")
+//    public void setRole() {
+//        roleService.initializeRoles();
+//    }
 }

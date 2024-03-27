@@ -41,6 +41,11 @@ public class CategoryService {
         return optional;
     }
 
+    public Category addCategory(Integer categoryId, String categoryName, String description){
+        Category category = new Category(categoryId, categoryName, description);
+        return category;
+    }
+
     public void initializeCategories(){
         try {
             this.db = FirestoreClient.getFirestore();

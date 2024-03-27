@@ -3,7 +3,7 @@ package com.opennote.OpenNote.api.model;
 public class Admin extends User {
 
     public Admin(int userID, String username, String email) {
-        super(userID, username, email);
+//        super(userID, username, email);
     }
 
     // Method to delete a user
