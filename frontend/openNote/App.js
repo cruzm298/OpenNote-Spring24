@@ -111,6 +111,40 @@ function ProfileScreen() {
     <View style={[styles.container, styles.centeredContent]}>
       <Text>Profile Screen</Text>
     </View>
+    <div className="flex flex-col items-center justify-center mt-10">
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden w-80 md:w-96">
+        <div className="bg-gray-100 p-4">
+          <img
+            className="w-24 h-24 rounded-full mx-auto"
+            src="https://www.clipartkey.com/mpngs/m/152-1520367_user-profile-default-image-png-clipart-png-download.png"
+            alt="User Avatar"
+          />
+          <h2 className="text-gray-800 text-xl font-semibold text-center mt-2">
+            John Doe
+          </h2>
+          <p className="text-sm text-gray-500 text-center">john.doe@example.com</p>
+        </div>
+        <div className="p-4 border-t border-b text-gray-700">
+          <div className="flex justify-between py-2">
+            <span className="text-sm">Username</span>
+            <span className="text-sm">johndoe123</span>
+          </div>
+          <div className="flex justify-between py-2">
+            <span className="text-sm">Email</span>
+            <span className="text-sm">john.doe@example.com</span>
+          </div>
+          <div className="flex justify-between py-2">
+            <span className="text-sm">Role</span>
+            <span className="text-sm">Admin</span>
+          </div>
+        </div>
+        <div className="bg-gray-100 p-4">
+          <button className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+            Edit Profile
+          </button>
+        </div>
+      </div>
+    </div>
   );
 }
 
