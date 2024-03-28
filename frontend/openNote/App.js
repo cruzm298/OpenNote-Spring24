@@ -108,43 +108,33 @@ function SettingsScreen() {
 
 function ProfileScreen() {
   return (
-    <View style={[styles.container, styles.centeredContent]}>
-      <Text>Profile Screen</Text>
+    <View style={styles.container}>
+      <View style={styles.profileCard}>
+        <Image
+          style={styles.avatar}
+          source={{ uri: "https://www.clipartkey.com/mpngs/m/152-1520367_user-profile-default-image-png-clipart-png-download.png" }}
+        />
+        <Text style={styles.name}>John Doe</Text>
+        <Text style={styles.email}>john.doe@example.com</Text>
+      </View>
+      <View style={styles.info}>
+        <View style={styles.infoItem}>
+          <Text style={styles.infoLabel}>Username</Text>
+          <Text style={styles.infoText}>johndoe123</Text>
+        </View>
+        <View style={styles.infoItem}>
+          <Text style={styles.infoLabel}>Email</Text>
+          <Text style={styles.infoText}>john.doe@example.com</Text>
+        </View>
+        <View style={styles.infoItem}>
+          <Text style={styles.infoLabel}>Role</Text>
+          <Text style={styles.infoText}>Admin</Text>
+        </View>
+      </View>
+      <TouchableOpacity style={styles.editButton}>
+        <Text style={styles.editButtonText}>Edit Profile</Text>
+      </TouchableOpacity>
     </View>
-    <div className="flex flex-col items-center justify-center mt-10">
-      <div className="bg-white shadow-lg rounded-lg overflow-hidden w-80 md:w-96">
-        <div className="bg-gray-100 p-4">
-          <img
-            className="w-24 h-24 rounded-full mx-auto"
-            src="https://www.clipartkey.com/mpngs/m/152-1520367_user-profile-default-image-png-clipart-png-download.png"
-            alt="User Avatar"
-          />
-          <h2 className="text-gray-800 text-xl font-semibold text-center mt-2">
-            John Doe
-          </h2>
-          <p className="text-sm text-gray-500 text-center">john.doe@example.com</p>
-        </div>
-        <div className="p-4 border-t border-b text-gray-700">
-          <div className="flex justify-between py-2">
-            <span className="text-sm">Username</span>
-            <span className="text-sm">johndoe123</span>
-          </div>
-          <div className="flex justify-between py-2">
-            <span className="text-sm">Email</span>
-            <span className="text-sm">john.doe@example.com</span>
-          </div>
-          <div className="flex justify-between py-2">
-            <span className="text-sm">Role</span>
-            <span className="text-sm">Admin</span>
-          </div>
-        </div>
-        <div className="bg-gray-100 p-4">
-          <button className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-            Edit Profile
-          </button>
-        </div>
-      </div>
-    </div>
   );
 }
 
@@ -255,4 +245,65 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: 22,
   },
-});
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginVertical: 20,
+  },
+  profileCard: {
+    backgroundColor: 'white',
+    borderRadius: 8,
+    padding: 16,
+    alignItems: 'center',
+  },
+  avatar: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+  },
+  name: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginTop: 8,
+  },
+  email: {
+    fontSize: 16,
+    color: 'gray',
+    marginTop: 4,
+  },
+  info: {
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
+    borderColor: 'gray',
+    paddingVertical: 8,
+    marginTop: 16,
+  },
+  infoItem: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+  },
+  infoLabel: {
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  infoText: {
+    fontSize: 16,
+  },
+  editButton: {
+    backgroundColor: 'blue',
+    borderRadius: 8,
+    padding: 12,
+    marginTop: 20,
+  },
+  editButtonText: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+};
+
+export default Profile;
