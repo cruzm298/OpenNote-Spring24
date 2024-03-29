@@ -1,0 +1,16 @@
+[
+  {
+    "userId": 1,
+    "username": "knagesh",
+    "email": "knagesh@syr.edu",
+    "password": "Admin@1234",
+    "roleId": "1"
+  },
+  {
+    "userId": 2,
+    "username": "aparida",
+    "email": "aparida@syr.edu",
+    "password": "Admin@1234",
+    "roleId": "2"
+  }
+]

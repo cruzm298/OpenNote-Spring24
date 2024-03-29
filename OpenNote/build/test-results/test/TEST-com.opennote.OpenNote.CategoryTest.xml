@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.opennote.OpenNote.CategoryTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-03-08T16:19:35" hostname="Krutarthas-MacBook-Air.local" time="2.219">
+  <properties/>
+  <testcase name="testAddCategory()" classname="com.opennote.OpenNote.CategoryTest" time="1.958"/>
+  <testcase name="testGetCategoryId()" classname="com.opennote.OpenNote.CategoryTest" time="0.007"/>
+  <testcase name="testGetCategoryDescription()" classname="com.opennote.OpenNote.CategoryTest" time="0.015"/>
+  <testcase name="contextLoads()" classname="com.opennote.OpenNote.CategoryTest" time="0.214"/>
+  <testcase name="testGetCategoryName()" classname="com.opennote.OpenNote.CategoryTest" time="0.009"/>
+  <system-out><![CDATA[Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+11:19:31.231 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.opennote.OpenNote.CategoryTest]: CategoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:19:31.584 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.opennote.OpenNote.OpenNoteApplication for test class com.opennote.OpenNote.CategoryTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.2)
+
+2024-03-08T11:19:32.661-05:00  INFO 57133 --- [    Test worker] com.opennote.OpenNote.CategoryTest       : Starting CategoryTest using Java 21.0.2 with PID 57133 (started by krutartha in /Users/krutartha/Desktop/CIS454/OpenNote-Spring24/OpenNote)
+2024-03-08T11:19:32.665-05:00  INFO 57133 --- [    Test worker] com.opennote.OpenNote.CategoryTest       : No active profile set, falling back to 1 default profile: "default"
+2024-03-08T11:19:35.749-05:00  INFO 57133 --- [    Test worker] com.opennote.OpenNote.CategoryTest       : Started CategoryTest in 3.7 seconds (process running for 7.411)
+]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/Users/krutartha/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.11/f9cb566608fbac6bc7bf54901a7aa11543a989ee/byte-buddy-agent-1.14.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
