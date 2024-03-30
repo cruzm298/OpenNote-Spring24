@@ -17,8 +17,8 @@ public class UserService {
     public UserService() {
         userList = new ArrayList<>();
 
-        User user1 = new User(1, "knagesh", "Admin@1234", "knagesh@syr.edu", 1);
-        User user2 = new User(2, "aparida", "Admin@1234", "aparida@syr.edu", 2);
+        User user1 = new User(1, "knagesh", "Admin@1234", "knagesh@syr.edu", 1, "Krutartha Nagesh");
+        User user2 = new User(2, "aparida", "Admin@1234", "aparida@syr.edu", 2, "Adya Parida");
 
         userList.addAll(Arrays.asList(user1, user2));
     }
@@ -89,8 +89,8 @@ public class UserService {
 
     }
 
-    public User addUser(Integer userId, String username, String email, String password, Integer roleId){
-        User user = new User(userId, username, email, password, roleId);
+    public User addUser(Integer userId, String username, String email, String password, Integer roleId, String name){
+        User user = new User(userId, username, email, password, roleId, name);
         //add db logic later
         return user;
     }

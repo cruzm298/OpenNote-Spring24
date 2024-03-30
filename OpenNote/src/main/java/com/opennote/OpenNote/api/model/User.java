@@ -11,8 +11,10 @@ public class User {
 //    private Date lastLogin;
     private Integer roleId;
 
+    private String name;
+
     //constructor
-    public User(int userId, String username, String password, String email, Integer roleId){
+    public User(int userId, String username, String password, String email, Integer roleId, String name){
         this.userId = userId;
         this.username = username;
         this.password = password;
@@ -20,6 +22,7 @@ public class User {
 //        this.registrationDate = registrationDate;
 //        this.lastLogin = lastLogin;
         this.roleId = roleId;
+        this.name = name;
     }
     public User(){}
 
@@ -78,5 +81,13 @@ public class User {
 
     public void setRoleId(Integer roleId){
         this.roleId = roleId;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public void setName(String name){
+        this.name = name;
     }
 }
