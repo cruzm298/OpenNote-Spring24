@@ -17,7 +17,7 @@ public class FirebaseService {
         FileInputStream serviceAccount;
         {
             try {
-                serviceAccount = new FileInputStream("src/main/java/com/opennote/OpenNote/service/private_key.json");
+                serviceAccount = new FileInputStream("OpenNote/src/main/java/com/opennote/OpenNote/service/private_key.json");
             } catch (FileNotFoundException e) {
                 throw new RuntimeException(e);
             }
