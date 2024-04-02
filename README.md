@@ -18,8 +18,11 @@ The main features we plan to integrate are:
   4. Up vote/down vote notes
   5. User feed
   6. Comment on notes
+<<<<<<< HEAD
 
 
 Frontend Inspiration:
 1. https://dribbble.com/shots/18272295-Notes
 2. https://dribbble.com/shots/21274105-Note-Mobile-App
+=======
+>>>>>>> aba79d8 (fixed no git repo bug)
