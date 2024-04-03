@@ -6,12 +6,15 @@ import HomeScreen from './Screens/HomeScreen';
 import NotesScreen from './Screens/NotesScreen';
 import SettingsScreen from './Screens/SettingsScreen';
 import ProfileScreen from './Screens/ProfileScreen';
+import Signup from './Screens/SignupScreen';
 
 
 const Tab = createBottomTabNavigator();
 
 export default function App() {
+  const [user, setUser] = useState(true);
   return (
+    user?     
     <NavigationContainer>
       <Tab.Navigator>
         <Tab.Screen name="Home" 
@@ -34,7 +37,7 @@ export default function App() {
           tabBarIcon: ()=>{<UserIcon />}
         }}/>
       </Tab.Navigator>
-    </NavigationContainer>
+    </NavigationContainer>: <Signup/>
   );
 }
 
