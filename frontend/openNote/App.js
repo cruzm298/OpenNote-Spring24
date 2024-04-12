@@ -7,7 +7,9 @@ import NotesScreen from './Screens/NotesScreen';
 import SettingsScreen from './Screens/SettingsScreen';
 import ProfileScreen from './Screens/ProfileScreen';
 import Signup from './Screens/SignupScreen';
+import NewNoteScreen from './Screens/NewNoteScreen';
 
+import { TouchableOpacity, View } from 'react-native';
 
 const Tab = createBottomTabNavigator();
 
@@ -15,7 +17,7 @@ export default function App() {
   const [user, setUser] = useState(true);
   return (
     user?     
-    <NavigationContainer>
+    <NavigationContainer className="flex flex-1 items-center justify-center">
       <Tab.Navigator>
         <Tab.Screen name="Home" 
         component={HomeScreen} options={{
@@ -28,7 +30,7 @@ export default function App() {
             <PencilIcon />
           }
         }} />
-        <Tab.Screen name="Settings" component={SettingsScreen} options={{
+        <Tab.Screen name="New Note" component={NewNoteScreen} options={{
           tabBarIcon: ()=>{
             <Cog6ToothIcon />
           }

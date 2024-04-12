@@ -12,36 +12,14 @@ import {
 } from 'react-native';
 import { styles } from '../styles';
 import { getAllNotes, postNewNote } from '../Api';
+import { useNavigation } from '@react-navigation/native';
+import { PlusIcon } from "react-native-heroicons/solid";
+
+
+
 
 export default function NotesScreen() {
-    // const [notes, setNotes] = useState([
-    //   { 
-    //     noteId: 1,
-    //     categoryId: 1,
-    //     creationDate: Date.now(),
-    //     description: "This is the description of the note!",
-    //     downVotes: 0,
-    //     upVotes: 1,
-    //     isEdited: false,
-    //     subjectId: 1,
-    //     title: "This is the Title",
-    //     userId: 1,
-    //     viewCount: 1
-    //   },
-    //   { 
-    //     noteId: 2,
-    //     categoryId: 1,
-    //     creationDate: Date.now(),
-    //     description: "Just type sout('hello world')",
-    //     downVotes: 0,
-    //     upVotes: 1,
-    //     isEdited: false,
-    //     subjectId: 1,
-    //     title: "Java Tutorial",
-    //     userId: 1,
-    //     viewCount: 1
-    //   }
-    // ]);
+    const navigation = useNavigation();
     const [notes, setNotes] = useState(null);
     const [title, setTitle] = useState(null);
     const [description, setDescription] = useState(null);
@@ -83,9 +61,6 @@ export default function NotesScreen() {
   
     return (
       <View style={styles.container}>
-        <TouchableOpacity style={styles.button} onPress={() => setModalVisible(true)}>
-          <Text style={styles.buttonText}>Add a Note</Text>
-        </TouchableOpacity>
         {!notes? <Text>No notes yet!</Text>:<ScrollView style={styles.notesContainer}>
           {notes.map((note) => (
             <View key={note.noteId} style={styles.note}>
@@ -98,7 +73,7 @@ export default function NotesScreen() {
         </ScrollView>}
 
 
-        <Modal
+        {/* <Modal
           animationType="slide"
           transparent={true}
           visible={modalVisible}
@@ -133,8 +108,13 @@ export default function NotesScreen() {
               </TouchableOpacity>
             </View>
           </View>
-        </Modal>
-        <StatusBar style="auto" />
+        </Modal>*/}
+          <View className="flex items-center justify-center">
+          <TouchableOpacity className="mt-4 flex items-center justify-center w-16 h-16 rounded-full bg-[#007bff] shadow-lg " onPress={()=> navigation.navigate("New Note")}>
+            <PlusIcon color="white" />
+          </TouchableOpacity>
+          </View>
+        <StatusBar style="auto" /> 
       </View>
     );
   }

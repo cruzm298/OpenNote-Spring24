@@ -3,11 +3,10 @@ import {
   Text,
   View,
 } from 'react-native';
-import { styles } from '../styles';
 
 export default function SettingsScreen() {
     return (
-      <View style={[styles.container, styles.centeredContent]}>
+      <View className="flex flex-1 bg-[#fff] p-10 items-center justify-center">
         <Text>Settings Screen!</Text>
       </View>
     );
