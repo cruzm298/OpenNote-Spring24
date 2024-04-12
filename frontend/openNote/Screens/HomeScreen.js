@@ -6,23 +6,46 @@ import {
   TouchableOpacity,
   SafeAreaView,
   TextInput,
-  ScrollView
+  ScrollView,
+  FlatList
 } from 'react-native';
 import * as Icon from "react-native-feather";
-//import Note from "../screenComponents/Note.js";
-import { getUserFromApi, test } from '../Api';
+//import Note from ".Note.js";
+import { getUserFromApi, getAllNotes, test } from '../Api';
 
 
 export default function HomeScreen() {
   const [user, setUser] = useState(null);
+  const [notes, setNotes] = useState(null);
+
   const getUser = async (userId) => {
     let myUser = await getUserFromApi(userId);
     console.log(myUser);
     setUser(myUser);
   }
+
+  const getNotes = async () => {
+    try {
+      let fetchedNotes = await getAllNotes();
+      setNotes(fetchedNotes);
+    } catch (error) {
+      console.error('Error fetching notes:', error);
+    }
+  }
+
   useEffect(()=>{
     getUser(1);
+
+    getNotes();
   }, []);
+  
+  const renderNoteItem = ({ item }) => (
+    <View style={{ padding: 10 }}>
+      <Text>{item.noteTitle}</Text>
+      {/* Add more UI components for note details as needed */}
+    </View>
+  );
+
     return (
       // Miguel code
       <SafeAreaView className="flex-1">
@@ -44,7 +67,16 @@ export default function HomeScreen() {
         </View>
 
         {/*User feed */}
+        <View>
+          <FlatList
+            data={notes}
+            renderItem={renderNoteItem}
+            keyExtractor={(item) => item.note}
+            contentContainerStyle={{ paddingBottom: 20}}
+            />
+        </View>
       </SafeAreaView>
+
 
      /* <View className="flex-1 items-center justify-center bg-white">
         <Text className="text-2xl font-bold">Welcome to OpenNote!</Text>
